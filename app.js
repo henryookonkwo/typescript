@@ -1,17 +1,17 @@
-var add = function (num1, num2, showResult, phrase) {
-    //   if (typeof num1 !== "number" || typeof num2 !== "number") {
-    //     throw new Error("Incorrect input!");
-    //   }
-    var result = num1 + num2;
-    if (showResult) {
-        console.log(phrase + result);
-    }
-    else {
-        return result;
-    }
+// const person: {
+//   name: string;
+//   age: number;
+// } = {
+var person = {
+    name: "Henry",
+    age: 30,
+    hobbies: ["Sports", "Cooking"],
 };
-var number1 = 3;
-var number2 = 15.4;
-var printResult = true;
-var resultPhrase = "The result is ";
-var result = add(number1, number2, printResult, resultPhrase);
+var favoriteActivities;
+favoriteActivities = ["Sports"];
+console.log(person.name);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase());
+    // console.log(hobby.map()); // !!! ERROR !!!
+}

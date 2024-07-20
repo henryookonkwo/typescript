@@ -1,22 +1,19 @@
-const add = (
-  num1: number,
-  num2: number,
-  showResult: boolean,
-  phrase: string
-) => {
-  //   if (typeof num1 !== "number" || typeof num2 !== "number") {
-  //     throw new Error("Incorrect input!");
-  //   }
-  const result = num1 + num2;
-  if (showResult) {
-    console.log(phrase + result);
-  } else {
-    return result;
-  }
+// const person: {
+//   name: string;
+//   age: number;
+// } = {
+const person = {
+  name: "Henry",
+  age: 30,
+  hobbies: ["Sports", "Cooking"],
 };
 
-const number1 = 3;
-const number2 = 15.4;
-const printResult = true;
-const resultPhrase = "The result is ";
-const result = add(number1, number2, printResult, resultPhrase);
+let favoriteActivities: string[];
+favoriteActivities = ["Sports"];
+
+console.log(person.name);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase());
+  // console.log(hobby.map()); // !!! ERROR !!!
+}
