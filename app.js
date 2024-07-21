@@ -10,5 +10,14 @@ printResult(add(2, 4));
 // let someItem = undefined;
 var combinedValues;
 combinedValues = add;
-// combinedValues = printResult;
+// combinedValues = printResult; This gives an error because we have defined the variable to have a function type which
+//takes two number arguements and returns a value of type number and this does not meet that criteria
 console.log(combinedValues(5, 10));
+//Function Types and callbacks
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
+addAndHandle(10, 20, function (result) {
+    console.log(result);
+});
