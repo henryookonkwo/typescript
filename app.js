@@ -1,22 +1,10 @@
-function combine(input1, input2, resultConversion) {
-    var result;
-    if ((typeof input1 === "number" && typeof input2 === "number") ||
-        resultConversion === "as-number") {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
-    // if (resultConversion === 'as-number') {
-    //   return +result;
-    // } else {
-    //   return result.toString();
-    // }
-}
-var combinedAges = combine(30, 26, "as-number");
-console.log(combinedAges);
-var combinedStringAges = combine("3610", "26", "as-number");
-console.log(combinedStringAges);
-var combinedNames = combine("Henry ", "Okonkwo", "as-text");
-console.log(combinedNames);
+//This add function is of type number
+var add = function (n1, n2) {
+    return n1 + n2;
+};
+//This printResult function is of tye void
+var printResult = function (num) {
+    console.log("Result is: ".concat(num));
+};
+printResult(add(2, 4));
+var someItem = undefined;
