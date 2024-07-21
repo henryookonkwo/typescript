@@ -10,4 +10,10 @@ const printResult = (num: number) => {
 
 printResult(add(2, 4));
 
-let someItem = undefined;
+// let someItem = undefined;
+
+let combinedValues: (a: number, b: number) => number;
+
+combinedValues = add;
+// combinedValues = printResult;
+console.log(combinedValues(5, 10));

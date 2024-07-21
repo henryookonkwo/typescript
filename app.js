@@ -7,4 +7,8 @@ var printResult = function (num) {
     console.log("Result is: ".concat(num));
 };
 printResult(add(2, 4));
-var someItem = undefined;
+// let someItem = undefined;
+var combinedValues;
+combinedValues = add;
+// combinedValues = printResult;
+console.log(combinedValues(5, 10));
