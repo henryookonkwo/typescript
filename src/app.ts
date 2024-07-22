@@ -12,4 +12,10 @@ function generateError(message: string, code: number): never {
   // while (true) {}
 }
 
-generateError("An error occurred!", 500);
+// generateError("An error occurred!", 500);
+
+const button = document.querySelector("button");
+
+button?.addEventListener("click", () => {
+  console.log("Button Clicked!!!");
+});
