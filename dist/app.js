@@ -1,17 +1,11 @@
 "use strict";
-let userInput;
-let userName;
-userInput = 5;
-userInput = "Max";
-if (typeof userInput === "string") {
-    userName = userInput;
-}
-function generateError(message, code) {
-    throw { message: message, errorCode: code };
-    // while (true) {}
-}
-// generateError("An error occurred!", 500);
 const button = document.querySelector("button");
-button === null || button === void 0 ? void 0 : button.addEventListener("click", () => {
-    console.log("Button Clicked!!!");
-});
+// button?.addEventListener("click", () => {
+//   console.log("Button Clicked!!!");
+// });
+const add = (a, b) => a + b;
+const printOutput = (output) => console.log(output);
+// if (button) {
+//   button.addEventListener("click", (output) => console.log(output));
+// }
+printOutput(add(3, 9));
