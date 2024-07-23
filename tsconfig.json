@@ -110,7 +110,8 @@
     "src/basics.ts",
     "src/functions.ts",
     "src/obj-array-enums.ts",
-    "src/union-aliases.ts"
+    "src/union-aliases.ts",
+    "src/unknown-never-types.ts"
   ]
   // "include": ["app.ts"]
   // "files": ["app.ts"]
