@@ -13,3 +13,24 @@ const printOutput: (a: number | string) => void = (output) =>
 // }
 
 printOutput(add(3, 9));
+
+const hobbies = ["running", "swimming"];
+const activeHobbies = ["Hiking"];
+
+activeHobbies.push(...hobbies);
+
+const person = {
+  name: "Henry",
+  age: 30,
+};
+//spread parameter
+const copiedPerson = { ...person };
+console.log(copiedPerson);
+
+//rest parameter - a feature for accepting unlimited amounts of documents
+const addMultipleNumbers = (...numbers: number[]) => {
+  return numbers.reduce((curResult, curValue) => {
+    return curResult + curValue;
+  }, 0);
+};
+printOutput(addMultipleNumbers(4, 5, 6, 2, 5, 6, 2));
