@@ -1,18 +1,15 @@
+"use strict";
 class Department {
-  name: string;
-
-  constructor(n: string) {
+  constructor(n) {
     this.name = n;
   }
-
-  describe(this: Department) {
+  describe() {
     console.log(`Department: ${this.name}`);
   }
 }
-
 const accounting = new Department(`Accounting`);
-console.log(accounting);
+// console.log(accounting);
 accounting.describe();
-
 const accountingCopy = { name: "DUMMY", describe: accounting.describe };
 accountingCopy.describe();
+//# sourceMappingURL=app.js.map
