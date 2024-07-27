@@ -1,18 +1,35 @@
-interface Person {
+interface Greetbale {
   name: string;
-  age: number;
+  //   age: number;
 
   greet(phrase: string): void;
 }
 
-let user1: Person;
+class Person implements Greetbale {
+  name: string;
+  age: number;
 
-user1 = {
-  name: "Henry",
-  age: 30,
+  constructor(n: string, a: number) {
+    this.name = n;
+    this.age = a;
+  }
+
   greet(phrase: string) {
     console.log(phrase + " " + this.name);
-  },
-};
+  }
+}
+
+let user1: Greetbale;
+
+// user1 = {
+//   name: "Henry",
+//   //   age: 30,
+//   greet(phrase: string) {
+//     console.log(phrase + " " + this.name);
+//   },
+// };
+
+user1 = new Person("Henry", 49);
 
 user1.greet("Hello, my name is");
+console.log(user1);
