@@ -1,17 +1,20 @@
-interface Greetbale {
+interface Named {
   readonly name: string;
+}
+
+interface Greetable extends Named {
   //   age: number;
 
   greet(phrase: string): void;
 }
 
-class Person implements Greetbale {
+class Person implements Greetable {
   name: string;
-  age: number;
+  age = 30;
 
-  constructor(n: string, a: number) {
+  constructor(n: string) {
     this.name = n;
-    this.age = a;
+    // this.age = a;
   }
 
   greet(phrase: string) {
@@ -19,7 +22,7 @@ class Person implements Greetbale {
   }
 }
 
-let user1: Greetbale;
+let user1: Greetable;
 
 // user1 = {
 //   name: "Henry",
@@ -29,7 +32,7 @@ let user1: Greetbale;
 //   },
 // };
 
-user1 = new Person("Henry", 49);
+user1 = new Person("Henry Okonkwo");
 // user1.name = "Test";
 
 user1.greet("Hello, my name is");
