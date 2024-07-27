@@ -1,5 +1,5 @@
 interface Greetbale {
-  name: string;
+  readonly name: string;
   //   age: number;
 
   greet(phrase: string): void;
@@ -30,6 +30,7 @@ let user1: Greetbale;
 // };
 
 user1 = new Person("Henry", 49);
+// user1.name = "Test";
 
 user1.greet("Hello, my name is");
 console.log(user1);
