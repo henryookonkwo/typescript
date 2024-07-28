@@ -4,12 +4,6 @@ const e1 = {
     privileges: ["create-server"],
     startDate: new Date(),
 };
-function add(a, b) {
-    if (typeof a === "string" || typeof b === "string") {
-        return a.toString() + b.toString();
-    }
-    return a + b;
-}
 function printEmployeeInformation(emp) {
     console.log("Name: " + emp.name);
     if ("privileges" in emp) {
@@ -55,4 +49,5 @@ function moveAnimal(animal) {
     console.log("Moving at speed: " + speed);
 }
 moveAnimal({ type: "bird", flyingSpeed: 10 });
+moveAnimal({ type: "horse", runningSpeed: 50 });
 //# sourceMappingURL=app.js.map
