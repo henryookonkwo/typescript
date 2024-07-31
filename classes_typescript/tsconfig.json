@@ -67,6 +67,7 @@
     "node_modules", // would be the default
     "src/classes.ts",
     "src/interfaces.ts",
-    "src/advanced-types.ts"
+    "src/advanced-types.ts",
+    "src/generics.ts"
   ]
 }
