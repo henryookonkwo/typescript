@@ -11,7 +11,7 @@
 //   // data.split(' ');
 // })
 
-//Array and promise are types of generic functions
+//Array and promise are examples of the built-in generic types
 
 //Custom Generic functions
 function merge<T extends object, U extends object>(objA: T, objB: U) {
@@ -82,3 +82,30 @@ const numberStorage = new DataStorage<number>();
 // // ...
 // objStorage.removeItem(maxObj);
 // console.log(objStorage.getItems());
+
+//Some built-in generic types
+
+//1. Partial type used to make the object properties to be optional
+interface CourseGoal {
+  title: string;
+  description: string;
+  completeUntil: Date;
+}
+
+function createCourseGoal(
+  title: string,
+  description: string,
+  date: Date
+): CourseGoal {
+  let courseGoal: Partial<CourseGoal> = {};
+  courseGoal.title = title;
+  courseGoal.description = description;
+  courseGoal.completeUntil = date;
+  return courseGoal as CourseGoal;
+}
+
+const names: Readonly<string[]> = ["Henry", "Nechem"];
+// names.push("TestName"); cannot add to the names array because it is readonly
+// names.pop() cannot remove from the names array because it is readonly
+
+// more utility types can be found here: https://www.typescriptlang.org/docs/handbook/utility-types.html
